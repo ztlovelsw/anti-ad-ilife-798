@@ -1,6 +1,7 @@
 import DeviceList from "@/components/DeviceList";
 import {getBaseUrl} from "@/utils/BaseURL";
 import LogoutBtn from "@/components/LogoutBtn";
+import CheckInCard from "@/components/CheckInCard";
 
 export default function Control() {
     const base_url = getBaseUrl()
@@ -8,6 +9,7 @@ export default function Control() {
     return (
         <div>
             <h1 className={"m-4 text-2xl font-bold"}>设备列表</h1>
+            <CheckInCard base_url={base_url}/>
             <DeviceList base_url={base_url}/>
             <LogoutBtn base_url={base_url}/>
         </div>
